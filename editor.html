@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Texto Avanzado</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>SuperEditor</h1>
+
+    <div class="toolbar">
+        <button onclick="formatText('bold')"><b>B</b></button>
+        <button onclick="formatText('italic')"><i>I</i></button>
+        <button onclick="formatText('underline')"><u>U</u></button>
+        <select onchange="changeFont(this.value)">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Verdana">Verdana</option>
+        </select>
+        <input type="color" onchange="changeColor(this.value)">
+        <input type="text" id="searchInput" placeholder="Buscar...">
+        <button onclick="searchText()">Buscar</button>
+        <button onclick="toUpperCase()">Mayúsculas</button>
+        <button onclick="toLowerCase()">Minúsculas</button>
+        <button onclick="trimText()">Trim</button>
+        <button onclick="replaceText()">Reemplazar</button>
+        <button onclick="replaceAllText()">Reemplazar Todo</button>
+        <button onclick="sliceText()">Slice</button>
+        <button onclick="substringText()">Substring</button>
+        <button onclick="substrText()">Substr</button>
+        <button onclick="concatText()">Concatenar</button>
+        <button onclick="repeatText()">Repetir</button>
+        <button onclick="padStartText()">Pad Start</button>
+        <button onclick="padEndText()">Pad End</button>
+        <button onclick="splitText()">Dividir</button>
+    </div>
+    
+    <div id="editor" contenteditable="true"></div>
+
+    <div class="word-count">Palabras: <span id="wordCount">0</span></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
